@@ -1,0 +1,11 @@
+# docs: only README.md is published
+*.md
+!README.md
+*.txt
+!requirements.txt
+# too large for GitHub (121 MB > 100 MB limit); download from Kaggle "Store Sales - Time Series Forecasting"
+train.csv
+# local tooling / caches
+.claude/
+__pycache__/
+*.pyc

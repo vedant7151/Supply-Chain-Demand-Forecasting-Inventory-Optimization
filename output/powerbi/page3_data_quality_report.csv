@@ -1,0 +1,6 @@
+table,check_type,column,count,pct
+oil,null_audit,dcoilwtico,43,3.53
+train,negative_sales_removed,sales,0,0.0
+train,outliers_flagged,sales,78034,2.6004
+train,missing_calendar_dates,date,4,0.237
+train,orphan_store_records,store_nbr,0,0.0

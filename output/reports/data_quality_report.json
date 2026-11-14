@@ -1,0 +1,57 @@
+{
+  "checks": [
+    {
+      "check": "null_audit_train",
+      "detail": "no nulls"
+    },
+    {
+      "check": "null_audit_stores",
+      "detail": "no nulls"
+    },
+    {
+      "check": "null_audit_oil",
+      "detail": {
+        "dcoilwtico": {
+          "nulls": 43,
+          "pct": 3.53
+        }
+      }
+    },
+    {
+      "check": "null_audit_holidays",
+      "detail": "no nulls"
+    },
+    {
+      "check": "oil_price_imputation",
+      "detail": "43 missing oil prices (3.5%) forward-filled (oil prices don't change on non-trading days) then back-filled for the series start."
+    },
+    {
+      "check": "date_continuity",
+      "detail": "Full range 2013-01-01 -> 2017-08-15 (1688 days). 4 calendar date(s) entirely absent from train.csv: ['2013-12-25', '2014-12-25', '2015-12-25', '2016-12-25']. (Known Favorita quirk: Dec 25 has zero rows every year because all stores are closed.)"
+    },
+    {
+      "check": "negative_sales",
+      "detail": "0 rows (0.0000%) had negative sales (returns / data-entry errors). Removed."
+    },
+    {
+      "check": "orphan_store_join",
+      "detail": "0 store_nbr value(s) in train.csv have no matching row in stores.csv: []"
+    },
+    {
+      "check": "iqr_outlier_detection",
+      "detail": "78034 rows (2.600%) flagged as extreme outliers (> Q3 + 3*IQR, computed per product family). Flagged, NOT removed (real promo/holiday spikes are legitimate signal, not noise) - top families by flag count: {'SCHOOL AND OFFICE SUPPLIES': 8713, 'MAGAZINES': 6284, 'BABY CARE': 5337, 'LADIESWEAR': 4307, 'PET SUPPLIES': 4159, 'PRODUCE': 3289, 'PLAYERS AND ELECTRONICS': 3108, 'SEAFOOD': 3010, 'LAWN AND GARDEN': 2941, 'FROZEN FOODS': 2800}"
+    }
+  ],
+  "summary": {
+    "rows_in": 3000889,
+    "rows_out": 3000888,
+    "rows_removed": 0,
+    "outliers_flagged": 78034,
+    "date_range": [
+      "2013-01-01",
+      "2017-08-15"
+    ],
+    "n_stores": 54,
+    "n_families": 33
+  }
+}

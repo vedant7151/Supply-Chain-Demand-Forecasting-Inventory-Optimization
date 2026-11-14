@@ -1,0 +1,11 @@
+{
+  "total_store_family_combos": 1782,
+  "excluded_zero_sales_last_28d": 114,
+  "active_combos_scored": 1668,
+  "positive_risk_combos": 823,
+  "combos_at_stockout_risk": 556,
+  "n_combos_driving_80pct_of_risk_units": 90,
+  "pct_combos_driving_80pct_of_risk": 10.9,
+  "pct_of_active_combos_driving_80pct": 5.4,
+  "total_positive_risk_units": 412217.9
+}

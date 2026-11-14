@@ -1,0 +1,24 @@
+kpi,value
+"Total Forecasted Demand, next 30 days, Base Case (units)",24764504.0
+Base Case 30-day demand P10 (units),24018089.0
+Base Case 30-day demand P90 (units),24842392.0
+"Forecast Accuracy - WAPE % (XGBoost, store-family, 30-day recursive)",14.14
+"Forecast Accuracy - WAPE % (XGBoost, store-family, one-step)",13.36
+"Forecast Accuracy - WAPE % (XGBoost, aggregated to company daily)",4.89
+MASE pooled (XGBoost store-family one-step; <1 beats seasonal naive in-sample),0.82
+"MAPE % (XGBoost store-family, non-zero actuals only; secondary metric)",50.47
+Forecast Bias % (XGBoost store-family),0.24
+"Optimistic vs Base, % units (point)",10.1
+"Optimistic vs Base P10, % units",3.4
+"Optimistic vs Base P90, % units",11.1
+"Pessimistic vs Base, % units (point)",-4.6
+"Pessimistic vs Base P10, % units",-7.3
+"Pessimistic vs Base P90, % units",-1.2
+Active Scenarios,3.0
+Store-Product Combinations Scored (sold in last 28 days),1668.0
+Combinations Excluded (zero sales in last 28 days),114.0
+Store-Product Combinations at Elevated Stockout Risk,556.0
+"Total Positive Stockout Risk (units, proxy-based)",412217.9
+% of Positive-Risk Combos Driving 80% of Risk Units (Pareto),10.9
+Rows Removed in Data Cleaning (negative sales),0.0
+"Rows Flagged as Outliers (kept, not removed)",78034.0
